@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Motor Works | Classic Car Restoration & Custom Builds</title>
+    <meta name="description" content="Heritage Motor Works specializes in full-frame classic car restoration, custom builds, and concours-quality finishes. Serving collectors and enthusiasts since 1987.">
+    <meta name="keywords" content="classic car restoration, vintage car repair, muscle car restoration, antique auto restoration, classic car paint, engine rebuild, custom classic cars">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --color-midnight: #0a0c10;
+            --color-charcoal: #1a1d24;
+            --color-steel: #2a2d35;
+            --color-chrome: #c8ccd4;
+            --color-silver: #e8eaed;
+            --color-cream: #f5f0e8;
+            --color-gold: #c9a84c;
+            --color-gold-light: #dfc06e;
+            --color-gold-dark: #a88a32;
+            --color-rust: #8b4513;
+            --color-red-accent: #a0282d;
+            --color-white: #ffffff;
+
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Barlow', 'Helvetica Neue', sans-serif;
+            --font-condensed: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+
+            --shadow-subtle: 0 2px 8px rgba(0,0,0,0.12);
+            --shadow-medium: 0 4px 24px rgba(0,0,0,0.18);
+            --shadow-heavy: 0 8px 40px rgba(0,0,0,0.3);
+            --shadow-gold: 0 4px 20px rgba(201,168,76,0.25);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-charcoal);
+            background: var(--color-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ─── UTILITY ─── */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-label {
+            font-family: var(--font-condensed);
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #5a5e68;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        /* ─── TOP BAR ─── */
+        .top-bar {
+            background: var(--color-midnight);
+            padding: 8px 0;
+            font-size: 0.82rem;
+            color: var(--color-chrome);
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .top-bar a {
+            color: var(--color-chrome);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .top-bar a:hover {
+            color: var(--color-gold);
+        }
+
+        .top-bar-contact {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .top-bar-contact i {
+            color: var(--color-gold);
+            margin-right: 6px;
+            font-size: 0.75rem;
+        }
+
+        .top-bar-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .top-bar-social a {
+            font-size: 0.9rem;
+        }
+
+        /* ─── NAVIGATION ─── */
+        .navbar {
+            background: var(--color-charcoal);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(201,168,76,0.15);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--color-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-midnight);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-name {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--color-white);
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .logo-tagline {
+            font-family: var(--font-condensed);
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            align-items: center;
+        }
+
+        .nav-links li a {
+            font-family: var(--font-condensed);
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--color-chrome);
+            text-decoration: none;
+            padding: 26px 18px;
+            display: block;
+            transition: color 0.2s, background 0.2s;
+            position: relative;
+        }
+
+        .nav-links li a:hover {
+            color: var(--color-gold);
+            background: rgba(201,168,76,0.05);
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--color-gold);
+            transition: width 0.3s;
+        }
+
+        .nav-links li a:hover::after {
+            width: 60%;
+        }
+
+        .nav-cta {
+            margin-left: 12px;
+        }
+
+        .nav-cta a {
+            background: var(--color-gold) !important;
+            color: var(--color-midnight) !important;
+            padding: 12px 24px !important;
+            font-weight: 600 !important;
+            border-radius: 2px;
+            transition: background 0.2s, box-shadow 0.2s !important;
+        }
+
+        .nav-cta a:hover {
+            background: var(--color-gold-light) !important;
+            box-shadow: var(--shadow-gold) !important;
+        }
+
+        .nav-cta a::after {
+            display: none !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 1.4rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            position: relative;
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--color-midnight);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1920&q=85&auto=format') center center / cover no-repeat;
+            filter: brightness(0.35) contrast(1.1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10,12,16,0.85) 0%, rgba(10,12,16,0.4) 50%, rgba(10,12,16,0.7) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+            padding: 40px 0;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201,168,76,0.12);
+            border: 1px solid rgba(201,168,76,0.3);
+            padding: 8px 18px;
+            border-radius: 2px;
+            margin-bottom: 28px;
+        }
+
+        .hero-badge span {
+            font-family: var(--font-condensed);
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            line-height: 1.05;
+            color: var(--color-white);
+            margin-bottom: 10px;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--color-gold);
+        }
+
+        .hero-divider {
+            width: 80px;
+            height: 2px;
+            background: var(--color-gold);
+            margin: 24px 0;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--color-chrome);
+            line-height: 1.75;
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-condensed);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 2px;
+            transition: all 0.25s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--color-gold);
+            color: var(--color-midnight);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-gold-light);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-white);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--color-gold);
+            color: var(--color-gold);
+            background: rgba(201,168,76,0.05);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 56px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-stat-number {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 2.4rem;
+            color: var(--color-gold);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-family: var(--font-condensed);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-chrome);
+            margin-top: 6px;
+        }
+
+        /* ─── ABOUT ─── */
+        .about {
+            padding: 100px 0;
+            background: var(--color-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about-image-wrap {
+            position: relative;
+        }
+
+        .about-image-wrap img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 2px;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .about-image-accent {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 180px;
+            height: 180px;
+            border: 2px solid var(--color-gold);
+            border-radius: 2px;
+            z-index: -1;
+        }
+
+        .about-experience-badge {
+            position: absolute;
+            top: 24px;
+            right: -28px;
+            background: var(--color-gold);
+            color: var(--color-midnight);
+            padding: 20px 24px;
+            text-align: center;
+            border-radius: 2px;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .about-experience-badge .number {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 2.6rem;
+            line-height: 1;
+            display: block;
+        }
+
+        .about-experience-badge .label {
+            font-family: var(--font-condensed);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            color: #5a5e68;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-condensed);
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            color: var(--color-charcoal);
+        }
+
+        .about-feature i {
+            color: var(--color-gold);
+            font-size: 0.75rem;
+        }
+
+        /* ─── SERVICES ─── */
+        .services {
+            padding: 100px 0;
+            background: var(--color-cream);
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .services-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .service-card {
+            background: var(--color-white);
+            padding: 40px 32px;
+            border-radius: 2px;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--color-gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(201,168,76,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .service-icon i {
+            font-size: 1.2rem;
+            color: var(--color-gold-dark);
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 14px;
+            color: var(--color-charcoal);
+        }
+
+        .service-card p {
+            color: #6b6f78;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ─── PORTFOLIO / GALLERY ─── */
+        .portfolio {
+            padding: 100px 0;
+            background: var(--color-midnight);
+            color: var(--color-white);
+        }
+
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .portfolio-header .section-title {
+            color: var(--color-white);
+        }
+
+        .portfolio-header .section-subtitle {
+            color: var(--color-chrome);
+            margin: 0 auto;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 320px 320px;
+            gap: 16px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        .portfolio-item:nth-child(1) { grid-column: span 5; }
+        .portfolio-item:nth-child(2) { grid-column: span 4; }
+        .portfolio-item:nth-child(3) { grid-column: span 3; }
+        .portfolio-item:nth-child(4) { grid-column: span 4; }
+        .portfolio-item:nth-child(5) { grid-column: span 8; }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s, filter 0.5s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.06);
+            filter: brightness(0.7);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,12,16,0.85) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 28px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 4px;
+        }
+
+        .portfolio-overlay span {
+            font-family: var(--font-condensed);
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+        }
+
+        /* ─── PROCESS ─── */
+        .process {
+            padding: 100px 0;
+            background: var(--color-white);
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .process-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--color-gold), var(--color-gold), transparent);
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--color-cream);
+            border: 2px solid var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--color-gold-dark);
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-step h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--color-charcoal);
+        }
+
+        .process-step p {
+            font-size: 0.92rem;
+            color: #6b6f78;
+            line-height: 1.7;
+            padding: 0 8px;
+        }
+
+        /* ─── BEFORE/AFTER ─── */
+        .transformations {
+            padding: 100px 0;
+            background: var(--color-charcoal);
+            color: var(--color-white);
+        }
+
+        .transformations-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .transformations-header .section-title {
+            color: var(--color-white);
+        }
+
+        .transformations-header .section-subtitle {
+            color: var(--color-chrome);
+            margin: 0 auto;
+        }
+
+        .transformation-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .transformation-image {
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .transformation-image img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+        }
+
+        .transformation-label {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--color-gold);
+            color: var(--color-midnight);
+            font-family: var(--font-condensed);
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 16px;
+            border-radius: 2px;
+        }
+
+        .transformation-details {
+            padding: 0 16px;
+        }
+
+        .transformation-details h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+
+        .transformation-details p {
+            color: var(--color-chrome);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .transformation-specs {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .transformation-specs li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            font-size: 0.95rem;
+            color: var(--color-silver);
+        }
+
+        .transformation-specs li i {
+            color: var(--color-gold);
+            width: 18px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* ─── TESTIMONIALS ─── */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--color-cream);
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .testimonials-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--color-white);
+            padding: 36px;
+            border-radius: 2px;
+            box-shadow: var(--shadow-subtle);
+            position: relative;
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 18px;
+        }
+
+        .testimonial-stars i {
+            color: var(--color-gold);
+            font-size: 0.85rem;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 0.95rem;
+            color: #5a5e68;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--color-midnight);
+        }
+
+        .testimonial-author-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--color-charcoal);
+        }
+
+        .testimonial-author-car {
+            font-family: var(--font-condensed);
+            font-size: 0.8rem;
+            color: var(--color-gold-dark);
+            letter-spacing: 1px;
+        }
+
+        .testimonial-quote-mark {
+            position: absolute;
+            top: 20px;
+            right: 28px;
+            font-family: var(--font-display);
+            font-size: 4rem;
+            color: rgba(201,168,76,0.1);
+            line-height: 1;
+        }
+
+        /* ─── CTA BANNER ─── */
+        .cta-banner {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .cta-banner-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80&auto=format') center center / cover no-repeat;
+            filter: brightness(0.2);
+        }
+
+        .cta-banner-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10,12,16,0.92) 0%, rgba(26,29,36,0.88) 100%);
+        }
+
+        .cta-banner-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            color: var(--color-white);
+            margin-bottom: 16px;
+        }
+
+        .cta-banner p {
+            color: var(--color-chrome);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-banner-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .cta-phone {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--color-gold);
+            display: block;
+            margin-top: 28px;
+            text-decoration: none;
+        }
+
+        .cta-phone:hover {
+            color: var(--color-gold-light);
+        }
+
+        /* ─── CONTACT / FOOTER ─── */
+        .contact {
+            padding: 80px 0 0;
+            background: var(--color-midnight);
+            color: var(--color-white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .contact-info p {
+            color: var(--color-chrome);
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .contact-detail-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(201,168,76,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-icon i {
+            color: var(--color-gold);
+            font-size: 0.85rem;
+        }
+
+        .contact-detail-text {
+            color: var(--color-chrome);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .contact-detail-text strong {
+            display: block;
+            color: var(--color-white);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .contact-detail-text a {
+            color: var(--color-chrome);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-detail-text a:hover {
+            color: var(--color-gold);
+        }
+
+        .footer-links h4 {
+            font-family: var(--font-condensed);
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 24px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            color: var(--color-chrome);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s, padding-left 0.2s;
+            display: inline-block;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--color-gold);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            padding: 28px 0;
+            margin-top: 0;
+        }
+
+        .footer-bottom .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-copyright {
+            font-size: 0.82rem;
+            color: #5a5e68;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 14px;
+        }
+
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-chrome);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--color-gold);
+            color: var(--color-gold);
+            background: rgba(201,168,76,0.05);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .portfolio-grid {
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 260px 260px 260px;
+            }
+            .portfolio-item:nth-child(1) { grid-column: span 3; }
+            .portfolio-item:nth-child(2) { grid-column: span 3; }
+            .portfolio-item:nth-child(3) { grid-column: span 6; }
+            .portfolio-item:nth-child(4) { grid-column: span 3; }
+            .portfolio-item:nth-child(5) { grid-column: span 3; }
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process-steps::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+
+            .nav-links { display: none; }
+
+            .mobile-toggle { display: block; }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: var(--color-charcoal);
+                border-top: 1px solid rgba(255,255,255,0.06);
+                box-shadow: var(--shadow-heavy);
+            }
+
+            .nav-links.active li a {
+                padding: 16px 24px;
+            }
+
+            .nav-cta { margin-left: 0; }
+
+            .hero { min-height: 80vh; }
+
+            .hero-stats {
+                gap: 28px;
+                flex-wrap: wrap;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-experience-badge {
+                right: 16px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .portfolio-item,
+            .portfolio-item:nth-child(1),
+            .portfolio-item:nth-child(2),
+            .portfolio-item:nth-child(3),
+            .portfolio-item:nth-child(4),
+            .portfolio-item:nth-child(5) {
+                grid-column: span 1;
+                height: 260px;
+            }
+
+            .portfolio-overlay { opacity: 1; }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .transformation-showcase {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── TOP BAR ─── -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-contact">
+                <a href="tel:+15551987654"><i class="fas fa-phone-alt"></i> (555) 198-7654</a>
+                <a href="mailto:info@heritagemotorworks.com"><i class="fas fa-envelope"></i> info@heritagemotorworks.com</a>
+                <span><i class="fas fa-map-marker-alt"></i> 4821 Industrial Blvd, Riverside, CA</span>
+            </div>
+            <div class="top-bar-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── NAVIGATION ─── -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-car-side"></i></div>
+                <div class="logo-text">
+                    <span class="logo-name">Heritage Motor Works</span>
+                    <span class="logo-tagline">Classic Restoration</span>
+                </div>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Gallery</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="nav-cta"><a href="#contact">Get a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-award" style="color: var(--color-gold); font-size: 0.8rem;"></i>
+                    <span>Award-Winning Restorations Since 1987</span>
+                </div>
+                <h1>Bringing Classics<br>Back to <em>Glory</em></h1>
+                <div class="hero-divider"></div>
+                <p>Full-frame rotisserie restorations, concours-quality paint and body, engine rebuilds, and custom fabrication. We treat every vehicle like the irreplaceable piece of history it is.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-clipboard-list"></i> Request Free Estimate
+                    </a>
+                    <a href="#portfolio" class="btn btn-outline">
+                        <i class="fas fa-images"></i> View Our Work
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-number">500+</div>
+                        <div class="hero-stat-label">Cars Restored</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-number">37</div>
+                        <div class="hero-stat-label">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-number">98%</div>
+                        <div class="hero-stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── ABOUT ─── -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80&auto=format" alt="Master craftsman working on classic car restoration in our Riverside shop">
+                    <div class="about-image-accent"></div>
+                    <div class="about-experience-badge">
+                        <span class="number">37</span>
+                        <span class="label">Years of<br>Excellence</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="section-label">Our Story</div>
+                    <h2 class="section-title">Craftsmen Dedicated to Automotive Heritage</h2>
+                    <p>Heritage Motor Works was founded by master restorer Frank Castellano in 1987 with a simple belief: every classic car deserves to be restored to its original brilliance -- or beyond. What started as a two-bay garage has grown into a 15,000 sq. ft. restoration facility staffed by some of the most talented fabricators, painters, and mechanics in the country.</p>
+                    <p>We specialize in American muscle cars, European sports cars, and pre-war classics. Whether you need a factory-correct concours restoration or a custom restomod build, our team delivers results that win awards and turn heads.</p>
+                    <div class="about-features">
+                        <div class="about-feature"><i class="fas fa-check-circle"></i> ASE-Certified Technicians</div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i> Concours-Quality Paint</div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i> OEM &amp; NOS Parts Sourcing</div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i> Full Photo Documentation</div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i> Climate-Controlled Facility</div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i> Nationwide Shipping</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SERVICES ─── -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-header">
+                <div class="section-label">What We Do</div>
+                <h2 class="section-title">Complete Classic Car<br>Restoration Services</h2>
+                <p class="section-subtitle">From bare-metal bodywork to final detailing, we handle every stage of the restoration process under one roof with uncompromising attention to detail.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-car"></i></div>
+                    <h3>Full Frame-Off Restoration</h3>
+                    <p>Complete disassembly, rotisserie frame restoration, and meticulous reassembly. Every nut, bolt, and component inspected, restored, or replaced to factory specification.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-spray-can"></i></div>
+                    <h3>Paint &amp; Body</h3>
+                    <p>Downdraft spray booth with precision color-matching technology. From correct factory colors to custom finishes, we deliver flawless paint that wins at the highest levels of competition.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Engine &amp; Drivetrain</h3>
+                    <p>Complete engine rebuilds, transmission overhauls, and drivetrain restoration. We work with everything from flathead V8s to big block 427s, matching numbers or blueprinted performance builds.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-couch"></i></div>
+                    <h3>Interior &amp; Upholstery</h3>
+                    <p>Expert reupholstery using period-correct materials and methods. Leather, vinyl, carpet, headliners, door panels, and dash restoration -- all crafted to original or custom specifications.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Electrical &amp; Wiring</h3>
+                    <p>Complete wiring harness replacement, gauge restoration, and electrical system upgrades. We can maintain factory-correct wiring or integrate modern reliability with a period look.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Custom Fabrication</h3>
+                    <p>In-house metal fabrication for rust repair, panel replacement, and custom modifications. From patch panels to complete floor pans, our fabricators work steel and aluminum with surgical precision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── PORTFOLIO ─── -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="portfolio-header">
+                <div class="section-label">Our Portfolio</div>
+                <h2 class="section-title">Recent Restorations</h2>
+                <p class="section-subtitle">A selection of recent builds from our shop. Each project represents hundreds of hours of dedicated craftsmanship.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80&auto=format" alt="Restored 1967 Ford Mustang GT in cherry red - full concours restoration">
+                    <div class="portfolio-overlay">
+                        <h4>1967 Ford Mustang GT</h4>
+                        <span>Full Concours Restoration</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80&auto=format" alt="Restored 1963 Corvette Stingray in silver - frame-off restoration">
+                    <div class="portfolio-overlay">
+                        <h4>1963 Corvette Stingray</h4>
+                        <span>Frame-Off Restoration</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&q=80&auto=format" alt="Restored 1970 Dodge Challenger R/T in orange - restomod build">
+                    <div class="portfolio-overlay">
+                        <h4>1970 Dodge Challenger R/T</h4>
+                        <span>Restomod Build</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?w=800&q=80&auto=format" alt="Classic car engine bay detail - restored big block V8">
+                    <div class="portfolio-overlay">
+                        <h4>Blueprint 454 Big Block</h4>
+                        <span>Engine Build &amp; Detailing</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80&auto=format" alt="Restored 1969 Chevrolet Camaro SS in blue - complete body-off restoration">
+                    <div class="portfolio-overlay">
+                        <h4>1969 Camaro SS 396</h4>
+                        <span>Complete Body-Off Restoration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── PROCESS ─── -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="process-header">
+                <div class="section-label">How It Works</div>
+                <h2 class="section-title">Our Restoration Process</h2>
+                <p class="section-subtitle">A proven, transparent workflow that keeps you informed and involved at every stage of your vehicle's transformation.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h4>Consultation</h4>
+                    <p>We assess your vehicle, discuss your vision and budget, and develop a detailed restoration plan with transparent pricing -- no surprises.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h4>Disassembly &amp; Assessment</h4>
+                    <p>Complete teardown with photo documentation of every component. We catalog all parts and provide a comprehensive condition report.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h4>Restoration &amp; Build</h4>
+                    <p>Our craftsmen execute the restoration with regular photo updates. You are welcome to visit the shop any time to see your car's progress.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h4>Delivery &amp; Unveiling</h4>
+                    <p>Final quality inspection, test drive, and a reveal event at our shop. We deliver your finished vehicle with a comprehensive documentation binder.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── BEFORE / AFTER ─── -->
+    <section class="transformations" id="transformations">
+        <div class="container">
+            <div class="transformations-header">
+                <div class="section-label">Transformations</div>
+                <h2 class="section-title">From Barn Find to Show Winner</h2>
+                <p class="section-subtitle">See how we bring neglected classics back from the brink. This 1969 Camaro SS went from a field find to a national show winner.</p>
+            </div>
+            <div class="transformation-showcase">
+                <div class="transformation-image">
+                    <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80&auto=format" alt="Fully restored 1969 Chevrolet Camaro SS in pristine condition">
+                    <div class="transformation-label"><i class="fas fa-sparkles"></i> Completed Build</div>
+                </div>
+                <div class="transformation-details">
+                    <div class="section-label">Featured Build</div>
+                    <h3>1969 Camaro SS 396</h3>
+                    <p>This matching-numbers SS 396 was rescued from a barn in rural Pennsylvania. After 14 months of painstaking restoration, it took Best in Class at the Muscle Car and Corvette Nationals.</p>
+                    <ul class="transformation-specs">
+                        <li><i class="fas fa-wrench"></i> Full rotisserie frame-off restoration</li>
+                        <li><i class="fas fa-spray-can"></i> Factory-correct Fathom Green repaint</li>
+                        <li><i class="fas fa-cogs"></i> Matching-numbers 396/375hp rebuild</li>
+                        <li><i class="fas fa-car-side"></i> Restored Muncie M22 "Rock Crusher" trans</li>
+                        <li><i class="fas fa-couch"></i> Period-correct houndstooth interior</li>
+                        <li><i class="fas fa-trophy"></i> MCACN Best in Class 2024</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-clipboard-list"></i> Start Your Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── TESTIMONIALS ─── -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <div class="section-label">Client Reviews</div>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">We have built lasting relationships with collectors, enthusiasts, and first-time restorers across the country.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-mark">&ldquo;</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>Heritage Motor Works took my father's 1965 Mustang from a rusted shell to a show-stopping beauty. The attention to detail is beyond anything I've ever seen. Frank and his team truly care about preserving these cars.</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RM</div>
+                        <div>
+                            <div class="testimonial-author-name">Robert Martinez</div>
+                            <div class="testimonial-author-car">1965 Ford Mustang Fastback</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-mark">&ldquo;</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>I shipped my 1957 Bel Air across the country to Heritage because of their reputation. Worth every penny. The paint quality is concours-level, and they kept me updated with photos every week throughout the build.</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DW</div>
+                        <div>
+                            <div class="testimonial-author-name">David Whitfield</div>
+                            <div class="testimonial-author-car">1957 Chevrolet Bel Air</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-mark">&ldquo;</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>This was my first restoration project and I had no idea where to start. The team at Heritage walked me through every decision, stayed on budget, and delivered a car that exceeded my wildest expectations. Absolutely first-class.</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SC</div>
+                        <div>
+                            <div class="testimonial-author-name">Sarah Chen</div>
+                            <div class="testimonial-author-car">1970 Plymouth Barracuda</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CTA BANNER ─── -->
+    <section class="cta-banner">
+        <div class="cta-banner-bg"></div>
+        <div class="cta-banner-overlay"></div>
+        <div class="container">
+            <div class="cta-banner-content">
+                <div class="section-label" style="color: var(--color-gold);">Ready to Get Started?</div>
+                <h2>Your Classic Deserves the Best</h2>
+                <p>Whether it's a barn find, a family heirloom, or a recent acquisition, we'll bring your vision to life. Schedule a free consultation today.</p>
+                <div class="cta-banner-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i> Schedule Consultation
+                    </a>
+                    <a href="tel:+15551987654" class="btn btn-outline">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                </div>
+                <a href="tel:+15551987654" class="cta-phone">(555) 198-7654</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CONTACT / FOOTER ─── -->
+    <footer class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-label">Get In Touch</div>
+                    <h3>Start Your Restoration Journey</h3>
+                    <p>Stop by our Riverside shop for a tour, or reach out for a free estimate on your project. We welcome walk-ins and are happy to discuss your vision over the phone.</p>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-detail-text">
+                            <strong>Visit Our Shop</strong>
+                            4821 Industrial Blvd<br>Riverside, CA 92501
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-detail-text">
+                            <strong>Call Us</strong>
+                            <a href="tel:+15551987654">(555) 198-7654</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-detail-text">
+                            <strong>Email</strong>
+                            <a href="mailto:info@heritagemotorworks.com">info@heritagemotorworks.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-detail-text">
+                            <strong>Shop Hours</strong>
+                            Mon&ndash;Fri: 8:00 AM &ndash; 5:30 PM<br>
+                            Sat: 9:00 AM &ndash; 1:00 PM (by appt.)
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Full Restoration</a></li>
+                        <li><a href="#services">Paint &amp; Body</a></li>
+                        <li><a href="#services">Engine Rebuilds</a></li>
+                        <li><a href="#services">Interior &amp; Upholstery</a></li>
+                        <li><a href="#services">Electrical &amp; Wiring</a></li>
+                        <li><a href="#services">Custom Fabrication</a></li>
+                        <li><a href="#services">Parts Sourcing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#portfolio">Project Gallery</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#testimonials">Client Reviews</a></li>
+                        <li><a href="#contact">Get a Quote</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-copyright">
+                        &copy; 2026 Heritage Motor Works. All rights reserved.
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth reveal animations on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.service-card, .process-step, .testimonial-card, .portfolio-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(24px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Navbar background on scroll
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
